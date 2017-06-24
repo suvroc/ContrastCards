@@ -1,3 +1,4 @@
+import { BwCards } from './../bw-cards/bw-cards';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -9,6 +10,10 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  public bwCards() {
+    this.navCtrl.push(BwCards, { animate: true });
   }
 
 }

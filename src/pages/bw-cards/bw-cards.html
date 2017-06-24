@@ -1,0 +1,28 @@
+<!--
+  Generated template for the FreePlay page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="showHelp()">
+                <ion-icon name="help-circle"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <icon-chooser></icon-chooser>
+    <div class="controls">
+        <div class="container">
+            <div class="previous" (tap)="previous()"></div>
+            <div class="next" (tap)="next()"></div>
+        </div>
+    </div>
+</ion-content>

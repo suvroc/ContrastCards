@@ -1,0 +1,20 @@
+icon-engine {
+    .visualElements {
+        * {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+        icon-chooser {
+            width: 50%;
+            height: 50%;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
