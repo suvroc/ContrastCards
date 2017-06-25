@@ -7,7 +7,7 @@
 <ion-header [style.top]="headerVisible ? 0 : '-100px'" class="header">
 
     <ion-navbar>
-        <ion-checkbox [(ngModel)]="autochange" (click)="updateAutochange()"></ion-checkbox>
+        <ion-checkbox color="dark" [(ngModel)]="autochange" (click)="updateAutochange()"></ion-checkbox>
         Auto change ({{this.changeInterval}} sec)
         <ion-buttons end>
             <button ion-button icon-only (click)="showHelp()">

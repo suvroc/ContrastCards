@@ -13,7 +13,7 @@ import { NavController, NavParams, AlertController, Platform, Gesture } from 'io
   selector: 'page-bw-cards',
   templateUrl: 'bw-cards.html',
 })
-export class BwCards {
+export class BwCardsPage {
 
   public headerVisible: boolean = true;
   public autochange: boolean = false;

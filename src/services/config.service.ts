@@ -20,7 +20,7 @@ export class ConfigService {
         let config = this.storageService.get<ConfigStoreModel>(this.storageService.configKey);
         if (!config) {
             config = {
-                time: 2
+                time: 10
             };
         }
         this.timeConfig.value = config.time;
@@ -32,8 +32,8 @@ class ConfigStoreModel {
 }
 
 class TimeConfig {
-    public value: number = 30;
-    private step = 15;
+    public value: number = 10;
+    private step = 5;
     public onChange: EventEmitter<number> = new EventEmitter<number>();
     public plus() {
         this.value += this.step;

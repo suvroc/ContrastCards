@@ -1,0 +1,13 @@
+page-configuration {
+    .row {
+        display: flex;
+        align-items: center;
+        button {
+            flex: 0 0 auto;
+        }
+        div {
+            flex: 1 0 auto;
+            text-align: center;
+        }
+    }
+}

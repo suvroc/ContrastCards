@@ -1,4 +1,5 @@
-import { BwCards } from './../pages/bw-cards/bw-cards';
+import { ConfigurationPage } from './../pages/configuration/configuration';
+import { BwCardsPage } from './../pages/bw-cards/bw-cards';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -19,8 +20,9 @@ import { SwipeVertical } from '../directives/swipe-vertical/swipe-vertical';
     HomePage,
     IconChooser,
     IconEngine,
-    BwCards,
-    SwipeVertical
+    BwCardsPage,
+    SwipeVertical,
+    ConfigurationPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { SwipeVertical } from '../directives/swipe-vertical/swipe-vertical';
   entryComponents: [
     MyApp,
     HomePage,
-    BwCards
+    BwCardsPage,
+    ConfigurationPage
   ],
   providers: [
     StatusBar,
