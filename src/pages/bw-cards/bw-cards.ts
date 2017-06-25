@@ -18,9 +18,12 @@ export class BwCards {
   public headerVisible: boolean = true;
   public autochange: boolean = false;
   public autochangeTimer: number;
+  public inversed: boolean = true;
+  public changeInterval: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private platform: Platform,
     private symbolService: SymbolService, private configService: ConfigService) {
+      this.changeInterval = configService.timeConfig.value;
   }
 
   ionViewDidLoad() {
@@ -50,8 +53,8 @@ export class BwCards {
   public updateAutochange() {
     if (this.autochange) {
       this.autochangeTimer = setInterval(() => {
-        this.symbolService.next();
-      }, this.configService.timeConfig.value*1000)
+        this.next();
+      }, this.changeInterval*1000)
     } else {
       this.clearAutochange();
     }
@@ -65,11 +68,17 @@ export class BwCards {
   }
 
   public next() {
+    this.shuffleColors();
     this.symbolService.next();
   }
 
   public previous() {
+    this.shuffleColors();
     this.symbolService.prev();
+  }
+
+  private shuffleColors() {
+    this.inversed = Math.round(Math.random()) == 0;
   }
 
   public showHelp() {

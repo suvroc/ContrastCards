@@ -8,7 +8,7 @@
 
     <ion-navbar>
         <ion-checkbox [(ngModel)]="autochange" (click)="updateAutochange()"></ion-checkbox>
-        Auto change (30 sec)
+        Auto change ({{this.changeInterval}} sec)
         <ion-buttons end>
             <button ion-button icon-only (click)="showHelp()">
                 <ion-icon name="help-circle"></ion-icon>
@@ -19,7 +19,7 @@
 </ion-header>
 
 
-<ion-content class="inverse" padding (swipe)="showHeader($event)" (slide)="showHeader($event)">
+<ion-content [ngClass]="{ 'inverse': inversed }" padding (swipe)="showHeader($event)" (slide)="showHeader($event)">
     <icon-engine></icon-engine>
     <div class="controls">
         <div class="container">

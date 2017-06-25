@@ -2,7 +2,7 @@ page-home {
     .menu {
         display: flex;
         flex-wrap: wrap;
-        align-content: flex-start;
+        align-content: center;
         justify-content: center;
         text-align: center;
         height: 100%;
@@ -10,14 +10,18 @@ page-home {
             flex: 0 0 100%;
         }
         button {
-            height: 3em;
-            border-radius: 3em;
-            //background-color: #003E1F;
+            height: auto;
+            background-color: lightgray;
             //color: white;
-            border-width: 1px;
-            border-color: #557d68;
-            width: 60%;
+            border-width: 0;
+            //border-color: black;
+            //border-radius: 5px;
+            width: 80%;
             //box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+            svg {
+                height: 50%;
+                widows: 50%;
+            }
         }
     }
     .menuContent {
@@ -41,7 +45,7 @@ page-home {
         bottom: 10px;
         right: 10px;
         div {
-            color: #accfa8;
+            color: lightgray;
         }
     }
 }
