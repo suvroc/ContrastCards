@@ -1,6 +1,7 @@
-import { IconEngine } from './../../components/icon-engine/icon-engine';
+import { ConfigService } from './../../services/config.service';
+import { SymbolService } from './../../services/symbol.service';
 import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController, Platform } from 'ionic-angular';
+import { NavController, NavParams, AlertController, Platform, Gesture } from 'ionic-angular';
 
 /**
  * Generated class for the FreePlay page.
@@ -14,32 +15,61 @@ import { NavController, NavParams, AlertController, Platform } from 'ionic-angul
 })
 export class BwCards {
 
-  public iconEngine: IconEngine;
+  public headerVisible: boolean = true;
+  public autochange: boolean = false;
+  public autochangeTimer: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private platform: Platform) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private platform: Platform,
+    private symbolService: SymbolService, private configService: ConfigService) {
   }
 
   ionViewDidLoad() {
     this.platform.ready().then(() => {
       //this.admobFree.showBanner();
     });
+    this.autoHideHeader();
   }
 
   ionViewWillLeave() {
     //this.admobFree.hideBanner();
+    this.clearAutochange();
+  }
+
+  private clearAutochange() {
+    if (this.autochangeTimer) {
+      clearInterval(this.autochangeTimer);
+      this.autochangeTimer = null;
+    }
+  }
+
+  public showHeader($event:Gesture) {
+    this.headerVisible = true;
+    this.autoHideHeader();
+  }
+
+  public updateAutochange() {
+    if (this.autochange) {
+      this.autochangeTimer = setInterval(() => {
+        this.symbolService.next();
+      }, this.configService.timeConfig.value*1000)
+    } else {
+      this.clearAutochange();
+    }
+  }
+
+  private autoHideHeader() {
+    let timer = setTimeout(() => {
+      clearTimeout(timer);
+      this.headerVisible = false;
+    }, 3000);
   }
 
   public next() {
-    debugger;
-    if (this.iconEngine) {
-      this.iconEngine.nextSymbol();
-    }
+    this.symbolService.next();
   }
 
   public previous() {
-    if (this.iconEngine) {
-      this.iconEngine.previousSymbol();
-    }
+    this.symbolService.prev();
   }
 
   public showHelp() {

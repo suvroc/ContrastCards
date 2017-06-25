@@ -11,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { IconChooser } from '../components/icon-chooser/icon-chooser';
 import { IconEngine } from '../components/icon-engine/icon-engine';
 import { HttpModule } from "@angular/http";
+import { SwipeVertical } from '../directives/swipe-vertical/swipe-vertical';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpModule } from "@angular/http";
     HomePage,
     IconChooser,
     IconEngine,
-    BwCards
+    BwCards,
+    SwipeVertical
   ],
   imports: [
     BrowserModule,

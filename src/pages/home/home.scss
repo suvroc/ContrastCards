@@ -1,3 +1,47 @@
 page-home {
-
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        .menuItem {
+            flex: 0 0 100%;
+        }
+        button {
+            height: 3em;
+            border-radius: 3em;
+            //background-color: #003E1F;
+            //color: white;
+            border-width: 1px;
+            border-color: #557d68;
+            width: 60%;
+            //box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+        }
+    }
+    .menuContent {
+        //background-color: #e5e8c9;
+    }
+    .cloud {
+        position: absolute;
+        animation: dude 20s 1 forwards;
+        animation-iteration-count: infinite;
+    }
+    @keyframes dude {
+        0% {
+            left: 200%;
+        }
+        100% {
+            left: -100%;
+        }
+    }
+    .footer {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        div {
+            color: #accfa8;
+        }
+    }
 }

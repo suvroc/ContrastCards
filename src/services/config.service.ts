@@ -20,7 +20,7 @@ export class ConfigService {
         let config = this.storageService.get<ConfigStoreModel>(this.storageService.configKey);
         if (!config) {
             config = {
-                time: 30
+                time: 2
             };
         }
         this.timeConfig.value = config.time;

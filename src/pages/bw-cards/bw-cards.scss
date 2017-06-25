@@ -14,4 +14,15 @@ page-bw-cards {
             flex: 0 1 50%;
         }
     }
+    .header {
+        transition: top 2.00s ease;
+    }
+    //ion-content {
+    .inverse {
+        background-color: black !important;
+        svg {
+            fill: white;
+        }
+    }
+    // }
 }
