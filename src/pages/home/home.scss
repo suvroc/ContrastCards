@@ -8,37 +8,34 @@ page-home {
         height: 100%;
         .menuItem {
             flex: 0 0 100%;
-        }
-        button {
-            height: auto;
-            background-color: lightgray;
-            //color: white;
-            border-width: 0;
-            //border-color: black;
-            //border-radius: 5px;
-            width: 80%;
-            //box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-            svg {
-                height: 50%;
-                widows: 50%;
+            // &:before {
+            //     content: '';
+            //     float: left;
+            //     padding-top: 100%;
+            // }
+            width: 100%;
+            height: 50%;
+            &.bw-card {
+                background: url('../assets/bw_icon.svg') no-repeat, lightgrey;
+                background-repeat: no-repeat;
+                background-size: 90% 90%;
+                background-position: center;
+            }
+            &.color-card {
+                background: url('../assets/color_icon.svg') no-repeat, lightgrey;
+                background-repeat: no-repeat;
+                background-size: 90% 90%;
+                background-position: center;
             }
         }
+        // button {
+        //     border-width: 0;
+        //     width: 100%;
+        //     //height: 50%;
+        // }
     }
     .menuContent {
         //background-color: #e5e8c9;
-    }
-    .cloud {
-        position: absolute;
-        animation: dude 20s 1 forwards;
-        animation-iteration-count: infinite;
-    }
-    @keyframes dude {
-        0% {
-            left: 200%;
-        }
-        100% {
-            left: -100%;
-        }
     }
     .footer {
         position: fixed;
