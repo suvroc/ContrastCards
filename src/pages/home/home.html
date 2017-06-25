@@ -1,11 +1,13 @@
 <ion-content padding>
     <div class="menu">
         <!--<icon-engine [configuration]="iconConfiguration"></icon-engine>-->
-        <div class="menuItem bw-card">
-            <div class="button"></div>
+        <div class="menuItem" (click)="bwCards()">
+            <div class="button bw-card"></div>
         </div>
-        <div class="menuItem color-card">
-            <div class="button"></div>
+        <div class="menuItem">
+            <div class="button color-card">
+                <div class="text">SOON</div>
+            </div>
         </div>
         <div class="footer">
             <div (click)="showInfo()">by Diwebsity</div>
