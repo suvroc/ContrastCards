@@ -16,7 +16,7 @@ export class IconEngine {
 
   public turnTime: number = 30;
 
-  constructor(private symbolService: SymbolService, private configService: ConfigService) {
+  constructor(private symbolService: SymbolService, configService: ConfigService) {
     console.log('Hello IconEngine Component');
 
     this.turnTime = configService.timeConfig.value;

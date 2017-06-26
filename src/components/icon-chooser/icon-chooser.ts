@@ -1,6 +1,6 @@
 import { SymbolService } from './../../services/symbol.service';
 import { Component } from '@angular/core';
-import { DomSanitizer, SafeHtml } from "@angular/platform-browser";
+import { SafeHtml } from "@angular/platform-browser";
 import { SymbolDetail } from "../../models/symbol-detail";
 
 
@@ -19,7 +19,7 @@ export class IconChooser {
 
   public svgIcon: SafeHtml;
 
-  constructor(private sanitizer: DomSanitizer, private symbolService: SymbolService) {
+  constructor(private symbolService: SymbolService) {
     this.symbolService.onChange.subscribe(symbol => this.showIcon(symbol));
 
     this.symbolService.load().then(x => this.symbolService.next());

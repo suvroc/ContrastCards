@@ -22,7 +22,7 @@ export class BwCardsPage {
   public changeInterval: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private platform: Platform,
-    private symbolService: SymbolService, private configService: ConfigService) {
+    private symbolService: SymbolService, configService: ConfigService) {
       this.changeInterval = configService.timeConfig.value;
   }
 
