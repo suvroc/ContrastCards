@@ -1,3 +1,4 @@
+import { IconEngineModule } from './../components/icon-engine/icon-engine.module';
 import { ConfigurationPage } from './../pages/configuration/configuration';
 import { BwCardsPage } from './../pages/bw-cards/bw-cards';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -9,8 +10,6 @@ import { HomePage } from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { IconChooser } from '../components/icon-chooser/icon-chooser';
-import { IconEngine } from '../components/icon-engine/icon-engine';
 import { HttpModule } from "@angular/http";
 import { SwipeVertical } from '../directives/swipe-vertical/swipe-vertical';
 
@@ -18,8 +17,6 @@ import { SwipeVertical } from '../directives/swipe-vertical/swipe-vertical';
   declarations: [
     MyApp,
     HomePage,
-    IconChooser,
-    IconEngine,
     BwCardsPage,
     SwipeVertical,
     ConfigurationPage
@@ -27,7 +24,8 @@ import { SwipeVertical } from '../directives/swipe-vertical/swipe-vertical';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    IconEngineModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
