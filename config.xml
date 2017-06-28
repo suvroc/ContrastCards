@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.diwebsity.contrastcards" version="0.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.diwebsity.contrastcards" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Baby Contrast Cards</name>
     <description>Stimulate baby eyes with high contrast cards</description>
     <author email="contact@diwebsity.com" href="contact@diwebsity.com">Suvroc</author>
