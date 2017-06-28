@@ -1,3 +1,4 @@
+import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { IconEngineModule } from './../components/icon-engine/icon-engine.module';
 import { ConfigurationPage } from './../pages/configuration/configuration';
 import { BwCardsPage } from './../pages/bw-cards/bw-cards';
@@ -12,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from "@angular/http";
 import { SwipeVertical } from '../directives/swipe-vertical/swipe-vertical';
+import { PowerManagement } from '@ionic-native/power-management';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { SwipeVertical } from '../directives/swipe-vertical/swipe-vertical';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AndroidFullScreen,
+    PowerManagement
   ]
 })
 export class AppModule {}

@@ -2,6 +2,8 @@ import { ConfigService } from './../../services/config.service';
 import { SymbolService } from './../../services/symbol.service';
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController, Platform, Gesture } from 'ionic-angular';
+import { AndroidFullScreen } from '@ionic-native/android-full-screen';
+import { PowerManagement } from '@ionic-native/power-management';
 
 /**
  * Generated class for the FreePlay page.
@@ -22,7 +24,8 @@ export class BwCardsPage {
   public changeInterval: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private platform: Platform,
-    private symbolService: SymbolService, configService: ConfigService) {
+    private symbolService: SymbolService, configService: ConfigService, private androidFullScreen: AndroidFullScreen,
+    private powerManagement: PowerManagement) {
       this.changeInterval = configService.timeConfig.value;
   }
 
@@ -31,11 +34,21 @@ export class BwCardsPage {
       //this.admobFree.showBanner();
     });
     this.autoHideHeader();
+
+    this.androidFullScreen.isImmersiveModeSupported()
+      .then(() => this.androidFullScreen.immersiveMode())
+      .catch((error: any) => console.log(error));
+
+      this.powerManagement.acquire()
+        .catch(console.log);
   }
 
   ionViewWillLeave() {
     //this.admobFree.hideBanner();
     this.clearAutochange();
+
+    this.powerManagement.release()
+      .catch(console.log);
   }
 
   private clearAutochange() {

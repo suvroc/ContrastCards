@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="splash.svg"
-   inkscape:export-filename="D:\Projekty\GitHub\ContrastCards\resources\splash.png"
+   inkscape:export-filename="C:\H\PROJECTS\GitHub\ContrastCards\resources\splash.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -29,15 +29,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.31039531"
-     inkscape:cx="1366"
+     inkscape:cx="844.0849"
      inkscape:cy="1366"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
+     inkscape:window-height="1018"
+     inkscape:window-x="1358"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -57,6 +57,13 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,1679.6378)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.40900004;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4137"
+       width="2806.0991"
+       height="2780.3254"
+       x="-32.21698"
+       y="-1698.968" />
     <g
        id="g4136"
        transform="translate(980.68875,-981.13206)">
